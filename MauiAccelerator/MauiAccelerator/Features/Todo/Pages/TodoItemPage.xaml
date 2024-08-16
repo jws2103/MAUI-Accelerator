@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages1:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:MauiAccelerator.Features.Todo.Pages"
+             xmlns:pages1="clr-namespace:MauiAccelerator.Features.Common.Pages"
+             xmlns:views="clr-namespace:MauiAccelerator.Features.Common.Views"
+             HasNavBar="False"
+             x:Class="MauiAccelerator.Features.Todo.Pages.TodoItemPage"
+             x:DataType="pages:TodoItemPageViewModel">
+    <ScrollView>
+        <VerticalStackLayout Padding="20"
+                             Spacing="10"
+                             VerticalOptions="StartAndExpand">
+            <views:HeaderView />
+            <Label Text="Name" />
+            <Entry Text="{Binding Item.Name}" />
+            <Label Text="Notes" />
+            <Entry Text="{Binding Item.Notes}" />
+            <Label Text="Done" />
+            <Switch IsToggled="{Binding Item.Done}" />
+            <Button Text="Save"
+                    Command="{Binding SaveTodoCommand}" />
+            <Button Text="Delete"
+                    Command="{Binding DeleteTodoCommand}" />
+            <Button Text="Cancel"
+                    Command="{Binding CancelCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</pages1:BaseContentPage>

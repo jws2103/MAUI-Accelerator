@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:MauiAccelerator.Features.Common.Pages"
+             xmlns:pages1="clr-namespace:MauiAccelerator.Features.Profile.Pages"
+             xmlns:controls="clr-namespace:MauiAccelerator.UI.Controls"
+             xmlns:views="clr-namespace:MauiAccelerator.Features.Profile.Views"
+             xmlns:converters="clr-namespace:MauiAccelerator.Features.Profile.Converters"
+             x:DataType="pages1:ProfilePageViewModel"
+             x:Class="MauiAccelerator.Features.Profile.Pages.ProfilePage">
+    <pages:BaseContentPage.Resources>
+        <converters:IndexToBoolConverter x:Key="UserBasicInfoConverter" ExpectedIndex="0" />
+        <converters:IndexToBoolConverter x:Key="UserAddressInfoConverter" ExpectedIndex="1" />
+        <converters:IndexToBoolConverter x:Key="UserCompanyInfoConverter" ExpectedIndex="2" />
+    </pages:BaseContentPage.Resources>
+    <VerticalStackLayout Spacing="10"
+                         Margin="20">
+        <Image Source="{Binding UserProfile.Image}"
+               Aspect="AspectFit" />
+        <controls:SegmentedControlView
+              TabItemTexts="{Binding TabItemTexts}"
+              SelectedTabIndex="{Binding SelectedTabIndex}"
+              SelectedTabChangedCommand="{Binding SelectedTabChangedCommand}" />
+       <views:UserBasicInfoView 
+           IsVisible="{Binding SelectedTabIndex, Converter={StaticResource UserBasicInfoConverter}}" />
+       <views:UserAddressInfoView
+           IsVisible="{Binding SelectedTabIndex, Converter={StaticResource UserAddressInfoConverter}}" />
+       <views:UserCompanyInfoView 
+           IsVisible="{Binding SelectedTabIndex, Converter={StaticResource UserCompanyInfoConverter}}" />
+    </VerticalStackLayout>
+</pages:BaseContentPage>

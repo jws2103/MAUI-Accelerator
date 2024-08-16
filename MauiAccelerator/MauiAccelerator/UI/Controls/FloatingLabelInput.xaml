@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="Root"
+             x:Class="MauiAccelerator.UI.Controls.FloatingLabelInput">
+    <Grid>
+        <Entry x:Name="EntryField" 
+               Completed="Handle_Completed" 
+               HeightRequest="46" 
+               Text="{Binding Text, Source={x:Reference Root}}" 
+               ReturnType="{Binding ReturnType, Source={x:Reference Root}}"
+               IsPassword="{Binding IsPassword, Source={x:Reference Root}}"
+               Keyboard="{Binding Keyboard, Source={x:Reference Root}}"
+               TextColor="#374955" 
+               BackgroundColor="#E6F4F1"
+               Unfocused="Handle_Unfocused" 
+               Focused="Handle_Focused">
+        </Entry>
+        <Label x:Name="LabelTitle" 
+               Text="{Binding Title, Source={x:Reference Root}}" TextColor="#5D98B8" VerticalOptions="Center">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Handle_Tapped" />
+            </Label.GestureRecognizers>
+        </Label>
+    </Grid>
+</ContentView>

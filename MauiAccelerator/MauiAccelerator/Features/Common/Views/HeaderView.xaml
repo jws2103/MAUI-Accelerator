@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:MauiAccelerator.Features.Common.Pages"
+             xmlns:controls="clr-namespace:MauiAccelerator.UI.Controls"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             Margin="0,0,0,20"
+             x:DataType="pages:BasePageViewModel"
+             x:Class="MauiAccelerator.Features.Common.Views.HeaderView">
+    <controls:ButtonImage 
+        BackgroundColor="{x:Static ui:Colors.Secondary11}"
+        HorizontalOptions="Start"
+        ImageSource="{x:Static ui:Icons.BackGrayIcon}"
+        VerticalOptions="Start"
+        Command="{Binding ShellGoBackCommand}" />
+</Grid>

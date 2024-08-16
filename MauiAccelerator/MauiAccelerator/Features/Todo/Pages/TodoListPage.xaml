@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pages1:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MauiAccelerator.Features.Todo.Models"
+             xmlns:pages="clr-namespace:MauiAccelerator.Features.Todo.Pages"
+             xmlns:pages1="clr-namespace:MauiAccelerator.Features.Common.Pages"
+             x:Class="MauiAccelerator.Features.Todo.Pages.TodoListPage"
+             x:DataType="pages:TodoListPageViewModel">
+    <Grid RowDefinitions="*,Auto">
+        <CollectionView 
+            VerticalOptions="Fill"
+            ItemsSource="{Binding Items}"
+            SelectionMode="Single"
+            SelectedItem="{Binding SelectedTodo}"
+            SelectionChangedCommand="{Binding TodoItemSelectionChangedCommand}"
+            SelectionChangedCommandParameter="{Binding .}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:TodoItem">
+                    <Grid RowDefinitions="*,Auto">
+                        <Grid RowDefinitions="*,*" ColumnDefinitions="*,Auto" RowSpacing="10" Padding="20">
+                            <Label Text="{Binding Name}"
+                                   FontSize="14"
+                                   FontAttributes="Bold"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   FontSize="10"
+                                   Text="{Binding Notes}"
+                                   VerticalTextAlignment="Center"/>
+                            <Label Text="✔️"
+                                   Grid.Row="0"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="1"
+                                   VerticalTextAlignment="Center"
+                                   IsVisible="{Binding Done}"/>
+                        </Grid>
+                        <BoxView Grid.Row="1" 
+                                 HeightRequest="0.5"
+                                 HorizontalOptions="Fill"
+                                 Color="Purple" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <Button Grid.Row="1" Text="Add New Item"
+                Command="{Binding NavigateToItemCommand}"
+                Margin="20"/>
+    </Grid>
+</pages1:BaseContentPage>

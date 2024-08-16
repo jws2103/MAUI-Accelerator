@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:segmentedControl="clr-namespace:Plugin.Maui.SegmentedControl;assembly=Plugin.Maui.SegmentedControl"
+             x:Name="Root"
+             x:Class="MauiAccelerator.UI.Controls.SegmentedControlView">
+    <segmentedControl:SegmentedControl 
+        x:Name="SegmentedControl"
+        BackgroundColor="{Binding FillColor, Source={x:Reference Root}}"
+        TextColor="{Binding TextColor, Source={x:Reference Root}}"
+        TintColor="{Binding TintColor, Source={x:Reference Root}}"
+        SelectedTextColor="{Binding SelectedTextColor, Source={x:Reference Root}}"
+        SelectedSegment="{Binding SelectedTabIndex, Source={x:Reference Root}}"
+        ValueChanged="SegControl_OnValueChanged" />
+</ContentView>
