@@ -94,10 +94,46 @@
         <DependentUpon>LoginPage.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Features\Login\Resources\LoginResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>LoginResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Features\Common\Resources\CommonResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>CommonResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Features\Profile\Resources\ProfileResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ProfileResources.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Features\Todo\Resources\TodoResources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>TodoResources.resx</DependentUpon>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>
       <EmbeddedResource Include="appsettings.json" />
+      <EmbeddedResource Update="Features\Login\Resources\LoginResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>LoginResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Features\Common\Resources\CommonResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Features\Profile\Resources\ProfileResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ProfileResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Features\Todo\Resources\TodoResources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>TodoResources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
 </Project>

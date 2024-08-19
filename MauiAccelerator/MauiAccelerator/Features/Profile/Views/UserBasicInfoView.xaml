@@ -2,14 +2,16 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:profile="clr-namespace:MauiAccelerator.Features.Profile.Pages"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Profile.Resources"
              x:DataType="profile:ProfilePageViewModel"
              x:Class="MauiAccelerator.Features.Profile.Views.UserBasicInfoView">
     <VerticalStackLayout
            Spacing="10">
         <Grid ColumnDefinitions="*,*">
-            <Label Text="Name: "
-                   FontFamily="OpenSansSemibold" />
-            <Label Grid.Column="1">
+            <Label Text="{x:Static resources:ProfileResources.Name}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
+            <Label Grid.Column="1"
+                   Style="{StaticResource TextNormalLabel}">
                    <Label.Text>
                           <MultiBinding StringFormat="{}{0} {1}">
                                  <Binding Path="UserProfile.FirstName" />
@@ -19,15 +21,17 @@
             </Label>
         </Grid>
         <Grid ColumnDefinitions="*,*">
-            <Label Text="Age: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.Age}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Age, StringFormat='{0} yrs old'}" />
         </Grid>
         <Grid ColumnDefinitions="*,*">
-            <Label Text="Height: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.Height}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Height, StringFormat='{0} cm'}" />
         </Grid>
     </VerticalStackLayout>

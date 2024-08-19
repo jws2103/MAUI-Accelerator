@@ -3,14 +3,17 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Common.Resources"
              x:Class="MauiAccelerator.Features.Menu.Views.FlyoutFooter">
-    <StackLayout>
-        <Label Text="Todo app"
-               TextColor="GhostWhite"
-               FontAttributes="Bold"
+    <StackLayout
+        Margin="{extensions:EdgeInsets Bottom={x:Static ui:Dimensions.SpacingXXLarge}}">
+        <Label Text="{x:Static resources:CommonResources.AppName}"
+               Style="{StaticResource TextSmallLabel}"
                HorizontalOptions="Center" />
         <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
-               TextColor="GhostWhite"
+               Style="{StaticResource TextSmallestLabel}"
                HorizontalOptions="Center" />
     </StackLayout>
 </ContentView>

@@ -5,39 +5,53 @@
              xmlns:login="clr-namespace:MauiAccelerator.Features.Login.Pages"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:controls="clr-namespace:MauiAccelerator.UI.Controls"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             xmlns:resx="clr-namespace:MauiAccelerator.Features.Login.Resources"
              HasNavBar="False"
              x:DataType="login:LoginPageViewModel"
              x:Class="MauiAccelerator.Features.Login.Pages.LoginPage">
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                             Spacing="10"
+        <VerticalStackLayout Padding="{extensions:EdgeInsets All={x:Static ui:Dimensions.SpacingLarge}}"
+                             Spacing="{x:Static ui:Dimensions.SpacingMedium}"
                              VerticalOptions="StartAndExpand">
             <controls:FloatingLabelInput 
-                Title="Username"
+                Title="{x:Static resx:LoginResources.Username}"
                 Text="{Binding UserName}" />
             <Grid ColumnDefinitions="*,Auto"
-                  Margin="0,20">
+                  Margin="{extensions:EdgeInsets Vertical={x:Static ui:Dimensions.SpacingLarge}}">
                 <controls:FloatingLabelInput
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Title="Password"
+                    Title="{x:Static resx:LoginResources.Password}"
                     Text="{Binding Password}"
                     IsPassword="{Binding IsPassword}" />
-                <Label Grid.Column="1" 
-                       HorizontalTextAlignment="End"
-                       TextColor="Blue"
-                       Margin="10"
-                       Text="{Binding ShowPasswordText}">
-                    <Label.Behaviors>
+                <Image Grid.Column="1"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"
+                       Margin="{extensions:EdgeInsets Right={x:Static ui:Dimensions.SpacingMedium}}">
+                    <Image.Triggers>
+                        <DataTrigger Binding="{Binding IsPassword}"
+                                     TargetType="Image"
+                                     Value="True">
+                            <Setter Property="Source" Value="{x:Static ui:Icons.EyeIcon}" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding IsPassword}"
+                                     TargetType="Image"
+                                     Value="False">
+                            <Setter Property="Source" Value="{x:Static ui:Icons.EyeSlashIcon}" />
+                        </DataTrigger>
+                    </Image.Triggers>
+                    <Image.Behaviors>
                         <toolkit:TouchBehavior Command="{Binding TogglePasswordCommand}" />
-                    </Label.Behaviors>
-                </Label>
+                    </Image.Behaviors>
+                </Image>
             </Grid>
             <Grid ColumnDefinitions="*,Auto">
-                <Label Text="Keep me signed in" />
+                <Label Text="{x:Static resx:LoginResources.RetainLoginMessage}"/>
                 <Switch Grid.Column="1" IsToggled="{Binding KeepMeLoggedIn}" />
             </Grid>
-            <Button Text="Login"
+            <Button Text="{x:Static resx:LoginResources.Login}"
                     Command="{Binding LoginCommand}" />
             </VerticalStackLayout>
         </ScrollView>

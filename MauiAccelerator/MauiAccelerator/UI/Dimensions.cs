@@ -27,13 +27,4 @@ public static class Dimensions
     public const double CornerEdgeRadiusLarge = 5;
     public const double CornerEdgeRadiusXLarge = 8;
     public const double CornerEdgeRadiusXXL = 10;
-
-    public const double EntryModalLengthNormal = 76;
-    public const double EntryModalLengthLarge = 108;
-
-    public const double RoomIconSize = 18;
-    public const double PhotoButtonImageSize = 14;
-    public const double CardItemIconSize = 36;
-
-    public const double LargeIconSize = 40;
 }

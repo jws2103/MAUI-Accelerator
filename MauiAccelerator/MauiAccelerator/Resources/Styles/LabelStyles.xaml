@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:font="clr-namespace:MauiAccelerator.UI.Font"
+    xmlns:ui="clr-namespace:MauiAccelerator.UI">
+
+    <!--  Ag: Heading / H1  -->
+    <Style x:Key="HeadingH1Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading1}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+    <!--  Ag: Heading / H2  -->
+    <Style x:Key="HeadingH2Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading2}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+    <!--  Ag: Heading / H3  -->
+    <Style x:Key="HeadingH3Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading3}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+    <!--  Ag: Heading / H4  -->
+    <Style x:Key="HeadingH4Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading4}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+    <!--  Ag: Heading / H5  -->
+    <Style x:Key="HeadingH5Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading5}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+    <!--  Ag: Heading / H6  -->
+    <Style x:Key="HeadingH6Label" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Heading6}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+        <Setter Property="TextColor" Value="{x:Static ui:Colors.Grey1}" />
+    </Style>
+
+    <!--  Ag: Text / Large  -->
+    <Style x:Key="TextLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Large}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Medium) / Large  -->
+    <Style x:Key="TextMediumLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Large}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Bold) / Large  -->
+    <Style x:Key="TextBoldLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Large}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Text / Mid  -->
+    <Style x:Key="TextMidLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Mid}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Medium) / Mid  -->
+    <Style x:Key="TextMediumMidLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Mid}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Text (Bold) / Mid  -->
+    <Style x:Key="TextBoldMidLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Mid}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Text / Normal  -->
+    <Style x:Key="TextNormalLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Normal}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Medium) / Normal  -->
+    <Style x:Key="TextMediumNormalLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Normal}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Text (Bold) / Normal  -->
+    <Style x:Key="TextBoldNormalLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Normal}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Text / Small  -->
+    <Style x:Key="TextSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Small}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Medium) / Small  -->
+    <Style x:Key="TextMediumSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Small}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Text (Bold) / Small  -->
+    <Style x:Key="TextBoldSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Small}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Text / Smallest  -->
+    <Style x:Key="TextSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Smallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Text (Medium) / Smallest  -->
+    <Style x:Key="TextMediumSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Smallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Text (Bold) / Smallest  -->
+    <Style x:Key="TextBoldSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.Smallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Caption / Large  -->
+    <Style x:Key="CaptionLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionLarge}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Caption (Medium) / Large  -->
+    <Style x:Key="CaptionMediumLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionLarge}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Caption (Bold) / Large  -->
+    <Style x:Key="CaptionBoldLargeLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionLarge}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Caption / Small  -->
+    <Style x:Key="CaptionSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmall}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+    <!--  Ag: Caption (Medium) / Small  -->
+    <Style x:Key="CaptionMediumSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmall}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    <!--  Ag: Caption (Bold) / Small  -->
+    <Style x:Key="CaptionBoldSmallLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmall}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Caption / Smallest  -->
+    <Style x:Key="CaptionSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansRegular}" />
+    </Style>
+
+    <!--  Ag: Caption (Medium) / Smallest  -->
+    <Style x:Key="CaptionMediumSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+
+    <!--  Ag: Caption (Bold) / Smallest  -->
+    <Style x:Key="CaptionBoldSmallestLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{x:Static font:FontSize.CaptionSmallest}" />
+        <Setter Property="FontFamily" Value="{x:Static font:FontFamily.OpenSansSemibold}" />
+    </Style>
+    
+</ResourceDictionary>

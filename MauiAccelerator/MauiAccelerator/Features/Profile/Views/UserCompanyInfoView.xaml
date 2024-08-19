@@ -2,32 +2,37 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:profile="clr-namespace:MauiAccelerator.Features.Profile.Pages"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Profile.Resources"
              x:DataType="profile:ProfilePageViewModel"
              x:Class="MauiAccelerator.Features.Profile.Views.UserCompanyInfoView">
     <VerticalStackLayout
         Spacing="10">
            <Grid ColumnDefinitions="*,*">
-                  <Label Text="Company: "
-                         FontFamily="OpenSansSemibold" />
+                  <Label Text="{x:Static resources:ProfileResources.Company}"
+                         Style="{StaticResource TextBoldNormalLabel}" />
                   <Label Grid.Column="1" 
+                         Style="{StaticResource TextNormalLabel}"
                          Text="{Binding UserProfile.Company.Name}" />
            </Grid>
            <Grid ColumnDefinitions="*,*">
-            <Label Text="Department: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.Department}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Company.Department}" />
         </Grid>
         <Grid ColumnDefinitions="*,*">
-            <Label Text="Title: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.Title}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Company.Title}" />
         </Grid>
            <Grid ColumnDefinitions="*,*">
-                  <Label Text="Company address: "
-                         FontFamily="OpenSansSemibold" />
+                  <Label Text="{x:Static resources:ProfileResources.CompanyAddress}"
+                         Style="{StaticResource TextBoldNormalLabel}" />
                   <Label Grid.Column="1" 
+                         Style="{StaticResource TextNormalLabel}"
                          Text="{Binding UserProfile.Company.Address}" />
            </Grid>
     </VerticalStackLayout>

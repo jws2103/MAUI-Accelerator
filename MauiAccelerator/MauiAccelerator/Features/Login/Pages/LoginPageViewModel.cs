@@ -26,10 +26,8 @@ public partial class LoginPageViewModel(
     [ObservableProperty] private string _userName;
     [ObservableProperty] private string _password;
     [ObservableProperty] 
-    [NotifyPropertyChangedFor(nameof(ShowPasswordText))]
     private bool _isPassword = true;
     [ObservableProperty] private bool _keepMeLoggedIn;
-    public string ShowPasswordText => IsPassword ? "Show" : "Hide";
 
     public override void OnAppearing()
     {

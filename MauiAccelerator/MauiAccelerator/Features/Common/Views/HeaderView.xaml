@@ -4,7 +4,8 @@
              xmlns:pages="clr-namespace:MauiAccelerator.Features.Common.Pages"
              xmlns:controls="clr-namespace:MauiAccelerator.UI.Controls"
              xmlns:ui="clr-namespace:MauiAccelerator.UI"
-             Margin="0,0,0,20"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             Margin="{extensions:EdgeInsets Bottom={x:Static ui:Dimensions.SpacingLarge}}"
              x:DataType="pages:BasePageViewModel"
              x:Class="MauiAccelerator.Features.Common.Views.HeaderView">
     <controls:ButtonImage 

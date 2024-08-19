@@ -6,6 +6,8 @@
              xmlns:controls="clr-namespace:MauiAccelerator.UI.Controls"
              xmlns:views="clr-namespace:MauiAccelerator.Features.Profile.Views"
              xmlns:converters="clr-namespace:MauiAccelerator.Features.Profile.Converters"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
              x:DataType="pages1:ProfilePageViewModel"
              x:Class="MauiAccelerator.Features.Profile.Pages.ProfilePage">
     <pages:BaseContentPage.Resources>
@@ -13,8 +15,8 @@
         <converters:IndexToBoolConverter x:Key="UserAddressInfoConverter" ExpectedIndex="1" />
         <converters:IndexToBoolConverter x:Key="UserCompanyInfoConverter" ExpectedIndex="2" />
     </pages:BaseContentPage.Resources>
-    <VerticalStackLayout Spacing="10"
-                         Margin="20">
+    <VerticalStackLayout Spacing="{x:Static ui:Dimensions.SpacingMedium}"
+                         Margin="{extensions:EdgeInsets All={x:Static ui:Dimensions.SpacingLarge}}">
         <Image Source="{Binding UserProfile.Image}"
                Aspect="AspectFit" />
         <controls:SegmentedControlView

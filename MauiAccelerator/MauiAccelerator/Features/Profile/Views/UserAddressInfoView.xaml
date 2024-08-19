@@ -2,32 +2,37 @@
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:profile="clr-namespace:MauiAccelerator.Features.Profile.Pages"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Profile.Resources"
              x:DataType="profile:ProfilePageViewModel"
              x:Class="MauiAccelerator.Features.Profile.Views.UserAddressInfoView">
     <VerticalStackLayout
         Spacing="10">
         <Grid ColumnDefinitions="*,*">
-            <Label Text="City: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.City}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Address.City}" />
         </Grid>
         <Grid ColumnDefinitions="*,*">
-            <Label Text="State: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.State}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Address.State}" />
         </Grid>
         <Grid ColumnDefinitions="*,*">
-            <Label Text="Country: "
-                   FontFamily="OpenSansSemibold" />
+            <Label Text="{x:Static resources:ProfileResources.Country}"
+                   Style="{StaticResource TextBoldNormalLabel}"  />
             <Label Grid.Column="1" 
+                   Style="{StaticResource TextNormalLabel}"
                    Text="{Binding UserProfile.Address.Country}" />
         </Grid>
        <Grid ColumnDefinitions="*,*">
-                  <Label Text="Postal code: "
-                         FontFamily="OpenSansSemibold" />
+                  <Label Text="{x:Static resources:ProfileResources.PostalCode}"
+                         Style="{StaticResource TextBoldNormalLabel}" />
                   <Label Grid.Column="1" 
+                         Style="{StaticResource TextNormalLabel}"
                          Text="{Binding UserProfile.Address.PostalCode}" />
        </Grid>
     </VerticalStackLayout>

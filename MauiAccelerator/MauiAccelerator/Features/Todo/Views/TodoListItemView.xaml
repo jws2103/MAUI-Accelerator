@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             xmlns:models="clr-namespace:MauiAccelerator.Features.Todo.Models"
+             RowDefinitions="*,Auto"
+             x:DataType="models:TodoItem"
+             x:Class="MauiAccelerator.Features.Todo.Views.TodoListItemView">
+     <Grid 
+          RowDefinitions="*,*" 
+          ColumnDefinitions="*,Auto" 
+          RowSpacing="{x:Static ui:Dimensions.SpacingMedium}" 
+          Padding="{extensions:EdgeInsets All={x:Static ui:Dimensions.SpacingLarge}}">
+     <Label Text="{Binding Name}"
+          Style="{StaticResource TextBoldNormalLabel}"
+          VerticalTextAlignment="Center"/>
+     <Label Grid.Row="1"
+          Grid.Column="0"
+          Grid.ColumnSpan="2"
+          Style="{StaticResource TextSmallLabel}"
+          Text="{Binding Notes}"
+          VerticalTextAlignment="Center"/>
+     <Label Text="✔️"
+          Grid.Row="0"
+          Grid.RowSpan="2"
+          Grid.Column="1"
+          VerticalTextAlignment="Center"
+          IsVisible="{Binding Done}"/>
+     </Grid>
+     <BoxView Grid.Row="1" 
+        HeightRequest="0.5"
+        HorizontalOptions="Fill"
+        Color="{x:Static ui:Colors.SystemDarkPurpleBlue}" />
+</Grid>

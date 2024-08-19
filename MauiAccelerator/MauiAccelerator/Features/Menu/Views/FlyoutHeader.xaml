@@ -2,12 +2,14 @@
 
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Common.Resources"
              x:Class="MauiAccelerator.Features.Menu.Views.FlyoutHeader"
              HeightRequest="200">
-    <Grid BackgroundColor="Black">
-        <Label Text="Todo" 
-               TextColor="White" 
-               FontAttributes="Bold" 
+    <Grid BackgroundColor="{x:Static ui:Colors.Grey7}">
+        <Label Text="{x:Static resources:CommonResources.AppName}" 
+               TextColor="{x:Static ui:Colors.White}"
+               Style="{StaticResource TextBoldLargeLabel}"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center" />
     </Grid>

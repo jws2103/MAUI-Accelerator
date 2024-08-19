@@ -3,13 +3,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+    xmlns:ui="clr-namespace:MauiAccelerator.UI"
+    xmlns:resources="clr-namespace:MauiAccelerator.Features.Common.Resources"
     CloseWhenBackgroundIsClicked="False"
     BackgroundColor="DimGray"
     Opacity="0.9"
     x:Class="MauiAccelerator.Features.Popups.Loading.Pages.LoadingPopup">
 <Frame
     BackgroundColor="WhiteSmoke"
-    CornerRadius="10"
+    CornerRadius="{x:Static ui:Dimensions.CornerRadiusXXL}"
     HeightRequest="100"
     WidthRequest="150">
     <VerticalStackLayout            
@@ -21,7 +23,7 @@
             IsVisible="True"/>
         <Label
             HorizontalOptions="Center"
-            Text="Loading..."
+            Text="{x:Static resources:CommonResources.LoadingText}" 
             VerticalOptions="Center" />
     </VerticalStackLayout>
 </Frame>

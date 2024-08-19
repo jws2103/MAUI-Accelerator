@@ -4,25 +4,33 @@
              xmlns:pages="clr-namespace:MauiAccelerator.Features.Todo.Pages"
              xmlns:pages1="clr-namespace:MauiAccelerator.Features.Common.Pages"
              xmlns:views="clr-namespace:MauiAccelerator.Features.Common.Views"
+             xmlns:extensions="clr-namespace:MauiAccelerator.UI.Extensions"
+             xmlns:ui="clr-namespace:MauiAccelerator.UI"
+             xmlns:resources="clr-namespace:MauiAccelerator.Features.Todo.Resources"
              HasNavBar="False"
              x:Class="MauiAccelerator.Features.Todo.Pages.TodoItemPage"
              x:DataType="pages:TodoItemPageViewModel">
     <ScrollView>
-        <VerticalStackLayout Padding="20"
-                             Spacing="10"
+        <VerticalStackLayout Padding="{extensions:EdgeInsets All={x:Static ui:Dimensions.SpacingLarge}}"
+                             Spacing="{x:Static ui:Dimensions.SpacingMedium}"
                              VerticalOptions="StartAndExpand">
             <views:HeaderView />
-            <Label Text="Name" />
-            <Entry Text="{Binding Item.Name}" />
-            <Label Text="Notes" />
-            <Entry Text="{Binding Item.Notes}" />
-            <Label Text="Done" />
+            <Label Text="{x:Static resources:TodoResources.NameTitle}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
+            <Entry Text="{Binding Item.Name}"
+                   Style="{StaticResource TextNormalLabel}" />
+            <Label Text="{x:Static resources:TodoResources.Notes}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
+            <Entry Text="{Binding Item.Notes}"
+                   Style="{StaticResource TextNormalLabel}" />
+            <Label Text="{x:Static resources:TodoResources.Done}"
+                   Style="{StaticResource TextBoldNormalLabel}" />
             <Switch IsToggled="{Binding Item.Done}" />
-            <Button Text="Save"
+            <Button Text="{x:Static resources:TodoResources.Save}"
                     Command="{Binding SaveTodoCommand}" />
-            <Button Text="Delete"
+            <Button Text="{x:Static resources:TodoResources.Delete}"
                     Command="{Binding DeleteTodoCommand}" />
-            <Button Text="Cancel"
+            <Button Text="{x:Static resources:TodoResources.Cancel}"
                     Command="{Binding CancelCommand}" />
         </VerticalStackLayout>
     </ScrollView>

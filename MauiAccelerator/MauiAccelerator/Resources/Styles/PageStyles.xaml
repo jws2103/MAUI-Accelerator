@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:ui="clr-namespace:MauiAccelerator.UI">
+    <Style
+        x:Key="DefaultPageStyle"
+        TargetType="Page">
+        <Setter Property="BackgroundColor" Value="{x:Static ui:Colors.White}" />
+    </Style>
+</ResourceDictionary>

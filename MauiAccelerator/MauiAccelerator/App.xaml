@@ -6,9 +6,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/PageStyles.xaml" />
                 <ResourceDictionary Source="Resources/Styles/FrameStyles.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/LabelStyles.xaml" />
+                <ResourceDictionary Source="Resources/Styles/EntryStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <toolkit:InvertedBoolConverter x:Key="InverseBoolConverter" />
         </ResourceDictionary>
