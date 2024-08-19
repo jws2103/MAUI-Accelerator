@@ -2,6 +2,8 @@ namespace MauiAccelerator.Core.Constants;
 
 public static class AppConstants
 {
+    public const string ApiLoggingCategory = "Api Logging";
+    
     public const int DefaultTimeoutInSeconds = 60;
     
     public const string AppSettingsNamespace = "MauiAccelerator.appsettings.json";

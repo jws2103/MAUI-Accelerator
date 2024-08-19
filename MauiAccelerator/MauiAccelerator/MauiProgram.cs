@@ -6,6 +6,7 @@ using MauiAccelerator.Core.Api;
 using MauiAccelerator.Core.Database;
 using MauiAccelerator.Core.Device;
 using MauiAccelerator.Core.Essentials;
+using MauiAccelerator.Core.Helpers;
 using MauiAccelerator.Core.Messenger;
 using MauiAccelerator.Core.Navigation;
 using MauiAccelerator.Core.Settings;
@@ -52,10 +53,12 @@ public static class MauiProgram
             .UseMauiCommunityToolkit()
             .ConfigureMopups()
             .UseSegmentedControl();
+
+        if (DebugHelper.IsDebug())
+        {
+            builder.Logging.AddDebug();
+        }
         
-#if DEBUG
-        builder.Logging.AddDebug();
-#endif
         // Register pages with viewmodel
         builder.Services.AddTransient<LoginPage, LoginPageViewModel>();
         builder.Services.AddTransient<TodoListPage, TodoListPageViewModel>();
